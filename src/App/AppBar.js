@@ -1,6 +1,7 @@
 import React from 'react'
 import styled,{css} from 'styled-components'
-
+import {AppContext} from './AppProvider';
+import App from '.';
 const Logo = styled.div`
  font-size:1.5em;
 `
@@ -16,11 +17,19 @@ const ControlButtomElem = styled.div`
         text-shadow:0px 0px 60px #03ff03;
     `}
 `
-function ControlButton({name,active}){
+function ControlButton({name}){
     return (
-    <ControlButtomElem active={active}>
-        {toUpperCase(name)}
-    </ControlButtomElem>)
+    <AppContext.Consumer>
+        {({page,setPage})=>(
+            <ControlButtomElem 
+            active={page === name}
+            onClick={()=>setPage(name)}>
+            {toUpperCase(name)}
+        </ControlButtomElem>
+        )}
+        
+    </AppContext.Consumer>
+   )
 }
 
 function toUpperCase(lower){
