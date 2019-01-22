@@ -24,7 +24,7 @@ function ControlButton({name,active}){
 }
 
 function toUpperCase(lower){
-    return lower.chatAt(0).toUpperCase() + lower.subStr(1);
+    return lower.charAt(0).toUpperCase() + lower.substr(1);
 }
 
 export default ()=>(
