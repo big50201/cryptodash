@@ -9,7 +9,8 @@ export class AppProvider extends Component {
             page:'dashboard',
             ...this.saveSettings(),
             setPage:this.setPage,
-            confirmFavorites:this.confirmFavorites
+            confirmFavorites:this.confirmFavorites,
+            firstVisit:true
         }
     }
 
