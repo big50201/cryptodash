@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { AppContext } from '../AppProvider';
+import { AppContext } from '../App/AppProvider';
 
 const ConfirmButtonStyled = styled.div`
     margin:20px;

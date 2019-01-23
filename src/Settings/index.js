@@ -1,6 +1,6 @@
 import React from 'react';
-import WelcomeMessage from './WelcomeMessage';
-import ConfirmButton from './ConfirmButton';
+import WelcomeMessage from '../Settings/WelcomeMessage';
+import ConfirmButton from '../Settings/ConfirmButton';
 import Page from '../Shared/Page';
 export default function(){
     return (
