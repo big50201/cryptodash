@@ -23,7 +23,7 @@ export default ({topSection})=>(
        {
             Object.keys(coinList,topSection,favorites,filterCoins).length && 
             getCoinDisplay(coinList,topSection,favorites,filterCoins).map(item=>
-            (<CoinTile topSection={topSection} coinKey={item}></CoinTile>))
+            (<CoinTile key={item} topSection={topSection} coinKey={item}></CoinTile>))
         }
    </CoinGridStyled>} 
 </AppContext.Consumer>)
