@@ -7,9 +7,11 @@ import HightchartsTheme from '../Dashboard/HighchartsTheme';
 ReactHighChart.Highcharts.setOptions(HightchartsTheme);
 export default ()=>(
     <AppContext.Consumer>
-    {({})=>
+    {({historical})=>
         <Tile>
-            <ReactHighChart config={highchartsConfig()}/>
+            { historical ? 
+            <ReactHighChart config={highchartsConfig(historical)}/>:
+            <div>Loading hightChart data...</div>}
         </Tile>
     }
     </AppContext.Consumer>

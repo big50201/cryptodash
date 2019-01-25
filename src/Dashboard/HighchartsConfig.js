@@ -1,13 +1,15 @@
-export default function(){
+export default function(historical){
     return {
         title: {
-            text: 'Solar Employment Growth by Sector, 2010-2016'
+            text: ''
         },
 
         subtitle: {
-            text: 'Source: thesolarfoundation.com'
+            text: ''
         },
-
+        xAxis:{
+            type:'datetime'
+        },
         yAxis: {
             title: {
                 text: 'Prices'
@@ -28,10 +30,7 @@ export default function(){
             }
         },
 
-        series: [{
-            name: 'Installation',
-            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-        }],
+        series: historical,
 
         responsive: {
             rules: [{

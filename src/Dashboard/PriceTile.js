@@ -42,7 +42,7 @@ const JustifyLeft = styled.div`
 function ChangePercent({data}){
     return (
     <JustifyRight>
-        <ChangPct red={data.CHANGE24HOUR<0}>{numberfomat(data.CHANGE24HOUR)}</ChangPct>
+        <ChangPct red={data.CHANGE24HOUR<0}>{numberfomat(data.CHANGE24HOUR)}%</ChangPct>
     </JustifyRight>)
 }
 
