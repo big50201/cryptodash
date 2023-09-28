@@ -18,10 +18,8 @@ jobs:
         node-version: ${{ matrix.node-version }}      
     - name: Setup the code
       run: npm install
-    - name: Build
+    - name: Build and Deploy
       run: |
         npm run build
-    - name: Firebase Deploy
-      run: |
         sudo npm install -g firebase-tools@8
-        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
+        firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting        
