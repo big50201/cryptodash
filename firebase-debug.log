@@ -37,3 +37,40 @@
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [error] 
 [error] Error: Unable to authenticate using the provided code. Please try again.
+[debug] [2023-09-28T09:33:37.309Z] ----------------------------------------------------------------------
+[debug] [2023-09-28T09:33:37.309Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login:ci --no-localhost --debug
+[debug] [2023-09-28T09:33:37.310Z] CLI Version:   12.5.2
+[debug] [2023-09-28T09:33:37.310Z] Platform:      darwin
+[debug] [2023-09-28T09:33:37.310Z] Node Version:  v16.16.0
+[debug] [2023-09-28T09:33:37.313Z] Time:          Thu Sep 28 2023 17:33:37 GMT+0800 (台北標準時間)
+[debug] [2023-09-28T09:33:37.313Z] ----------------------------------------------------------------------
+[debug] 
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[debug] [2023-09-28T09:33:37.342Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-09-28T09:33:37.342Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"7a0e53a1-827a-4639-9ea3-970118053d80"}
+[debug] [2023-09-28T09:33:38.123Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2023-09-28T09:33:38.123Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"MZUL9xtFpb95CU_mU8PLaEtzsyMdrOF9K8VDz0yXR2A"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    7A0E5
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=iEoFqI1DMCKFUhTyRLB8JUd1XgY2JThi5xmzy5IbxUQ&session=7a0e53a1-827a-4639-9ea3-970118053d80&attest=MZUL9xtFpb95CU_mU8PLaEtzsyMdrOF9K8VDz0yXR2A
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
+[debug] [2023-09-28T09:33:58.536Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-09-28T09:33:58.536Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-09-28T09:33:58.834Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 200
+[debug] [2023-09-28T09:33:58.834Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[info] 
+[info] ✔  Success! Use this token to login on a CI server:
+
+1//0eTL11cirvhQKCgYIARAAGA4SNwF-L9IrJC_87FhyUTM20dDNnDslHg8YBbw83L7iCkgFv4k9f8-Z4_MXH9H04lGfqT5DwiFJOko
+
+Example: firebase deploy --token "$FIREBASE_TOKEN"
+ 
