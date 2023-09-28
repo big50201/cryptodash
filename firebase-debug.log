@@ -1,0 +1,39 @@
+[debug] [2023-09-28T09:08:12.260Z] ----------------------------------------------------------------------
+[debug] [2023-09-28T09:08:12.261Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login:ci --no-localhost --debug
+[debug] [2023-09-28T09:08:12.261Z] CLI Version:   12.5.2
+[debug] [2023-09-28T09:08:12.261Z] Platform:      darwin
+[debug] [2023-09-28T09:08:12.261Z] Node Version:  v16.16.0
+[debug] [2023-09-28T09:08:12.263Z] Time:          Thu Sep 28 2023 17:08:12 GMT+0800 (台北標準時間)
+[debug] [2023-09-28T09:08:12.264Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-28T09:08:12.265Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[debug] [2023-09-28T09:08:12.302Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2023-09-28T09:08:12.302Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"3cb36372-0165-4859-a5b4-7eb9521e2fdb"}
+[debug] [2023-09-28T09:08:13.070Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-28T09:08:13.071Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-09-28T09:08:13.162Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2023-09-28T09:08:13.162Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"O1Sy6DZcBTo8-0P3HBuE-L_pC7r5GZvf44XGAE1pb40"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    3CB36
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=j9Qi86KitgTbB3ByBEHe4ahs1lpHW1euvXeRJbti3xw&session=3cb36372-0165-4859-a5b4-7eb9521e2fdb&attest=O1Sy6DZcBTo8-0P3HBuE-L_pC7r5GZvf44XGAE1pb40
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
+[debug] [2023-09-28T09:08:31.700Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-09-28T09:08:31.701Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-09-28T09:08:31.858Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 400
+[debug] [2023-09-28T09:08:31.858Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-09-28T09:08:31.859Z] Token Fetch Error: FirebaseError: HTTP Error: 400, invalid_grant
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Unable to authenticate using the provided code. Please try again.
