@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   subtleBoxShadow,
-  greenBoxShadow,
   yellowBoxShadow,
   redBoxShadow,
   lightBlueBackground,
